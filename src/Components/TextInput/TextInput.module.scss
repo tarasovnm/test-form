@@ -1,0 +1,39 @@
+.Form {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+  }
+
+  &__label {
+    margin-bottom: 7px;
+    font-size: 16px;
+    line-height: 20.8px;
+    font-weight: 500;
+    color: #756f86;
+  }
+
+  &__input {
+    padding: 16px 16px 15px 16px;
+    font-size: 16px;
+    line-height: 20.8px;
+    font-weight: 400;
+    font-family: inherit;
+    color: #2c2738;
+    border: 1px solid #dbe2ea;
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+    border-radius: 6px;
+
+    &::placeholder {
+      font-size: 16px;
+      line-height: 20.8px;
+      font-weight: 400;
+      color: #7c9cbf;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px #0880ae;
+    }
+  }
+}

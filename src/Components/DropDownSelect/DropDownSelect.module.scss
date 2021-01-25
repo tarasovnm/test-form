@@ -2,6 +2,14 @@
   position: relative;
   margin-bottom: 35px;
 
+  &__label {
+    margin-bottom: 7px;
+    font-size: 16px;
+    line-height: 20.8px;
+    font-weight: 500;
+    color: #756f86;
+  }
+
   &__header {
     position: relative;
     padding: 16px 57px 15px 16px;
@@ -27,7 +35,7 @@
   &__body {
     display: none;
     position: absolute;
-    top: 56px;
+    top: 86px;
     left: 0;
     right: 0;
     padding: 12px 0;
@@ -35,6 +43,7 @@
     border: 1px solid #dbe2ea;
     box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04), 0px 20px 20px rgba(44, 39, 56, 0.04);
     border-radius: 6px;
+    z-index: 3;
   }
 
   &.opened &__header {

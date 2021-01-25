@@ -1,5 +1,6 @@
 .Form {
   &__item {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-bottom: 35px;
@@ -35,5 +36,14 @@
       outline: none;
       box-shadow: 0 0 0 2px #0880ae;
     }
+  }
+
+  &__error {
+    position: absolute;
+    bottom: -24px;
+    font-size: 14px;
+    line-height: 18.2px;
+    font-weight: 400;
+    color: #ff7171;
   }
 }

@@ -1,7 +1,7 @@
-import { useState } from "react";
+import {useState} from "react";
 import s from "./TextInput.module.scss";
 
-function TextInput({ name, label, placeholder, valid, onTextChanged, filter }) {
+function TextInput({name, label, placeholder, valid, onTextChanged, filter}) {
 
   const [text, setText] = useState("");
 

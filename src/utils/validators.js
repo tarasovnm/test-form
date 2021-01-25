@@ -3,6 +3,10 @@ export const validateEmail = (email) => {
 }
 
 export const validatePhone = (phone) => {
-  // https://stackoverflow.com/questions/4338267/validate-phone-number-with-javascript
-  return phone.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im);
+  const clearedPhone = phone.split(" ").join("")
+    .split("+").join("")
+    .split("-").join("")
+    .split("(").join("")
+    .split(")").join("");
+  return clearedPhone.length === 11;
 }

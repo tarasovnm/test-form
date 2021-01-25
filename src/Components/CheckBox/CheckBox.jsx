@@ -1,7 +1,7 @@
 import s from "./CheckBox.module.scss";
-import { useState } from 'react';
+import {useState} from 'react';
 
-function CheckBox({ name, checked, isCheckedChanged }) {
+function CheckBox({name, checked, isCheckedChanged}) {
 
   const [isChecked, setChecked] = useState(checked);
 
@@ -24,7 +24,7 @@ function CheckBox({ name, checked, isCheckedChanged }) {
         <span className={s.Check__box}>
           {isChecked ? checkedMark : ""}
         </span>
-        Принимаю <a className={s.Check__link} href="#">условия</a> использования
+        Принимаю <a className={s.Check__link} href="/">условия</a> использования
       </label>
     </div>
   );

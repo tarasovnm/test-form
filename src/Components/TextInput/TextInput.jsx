@@ -1,7 +1,7 @@
-import {useState} from "react";
+import { useState } from "react";
 import s from "./TextInput.module.scss";
 
-function TextInput({name, label, placeholder, valid, onTextChanged, filter}) {
+function TextInput({ name, label, placeholder, valid, onTextChanged, filter }) {
 
   const [text, setText] = useState("");
 
@@ -14,10 +14,10 @@ function TextInput({name, label, placeholder, valid, onTextChanged, filter}) {
   }
 
   return (
-    <div className={s.Form__item}>
-      <label className={s.Form__label} htmlFor={name}>{label}</label>
-      <input className={s.Form__input} type="text" name={name} id={name} placeholder={placeholder} onChange={textChanged} value={text} />
-      {valid ? "" : <div className={s.Form__error}>Введено не корректное значение</div>}
+    <div className={s.Field}>
+      <label className={s.Field__label} htmlFor={name}>{label}</label>
+      <input className={s.Field__input} type="text" name={name} id={name} placeholder={placeholder} onChange={textChanged} value={text} />
+      {valid ? "" : <div className={s.Field__error}>Введено не корректное значение</div>}
     </div>
   );
 }

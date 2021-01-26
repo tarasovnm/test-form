@@ -2,7 +2,7 @@ import s from "./SubmitButton.module.scss";
 
 function SubmitButton({ text, disabled }) {
   return (
-    <button className={s.Form__button} disabled={disabled}>{text}</button>
+    <button className={s.Button} disabled={disabled}>{text}</button>
   );
 }
 

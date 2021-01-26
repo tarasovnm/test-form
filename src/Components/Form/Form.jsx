@@ -3,9 +3,9 @@ import TextInput from "../TextInput/TextInput";
 import DropDownSelect from "../DropDownSelect/DropDownSelect";
 import CheckBox from "../CheckBox/CheckBox";
 import SubmitButton from "../SubmitButton/SubmitButton";
-import {nameFilter, phoneFilter} from "../../utils/filters";
-import {useState} from "react";
-import {validateEmail, validatePhone} from "../../utils/validators";
+import { nameFilter, phoneFilter } from "../../utils/filters";
+import { useState } from "react";
+import { validateEmail, validatePhone } from "../../utils/validators";
 
 function Form() {
 
@@ -23,7 +23,7 @@ function Form() {
   });
 
   const validateForm = (formData) => {
-    const {username, email, phone, isTermsAccepted} = formData;
+    const { username, email, phone, isTermsAccepted } = formData;
     setFormData({
       ...formData,
       isEmailValid: validateEmail(email),
@@ -33,7 +33,7 @@ function Form() {
   }
 
   const fieldChanged = (fieldName, fieldValue) => {
-    setFormData({...formData, [fieldName]: fieldValue});
+    setFormData({ ...formData, [fieldName]: fieldValue });
     setFormData((formData) => {
       formData.isFormValid = validateForm(formData);
       return formData;
@@ -44,7 +44,7 @@ function Form() {
     <div className={s.Form}>
       <h2 className={s.Form__title}>Регистрация</h2>
       <div className={s.Form__registered}>
-        Уже есть аккаунт? <a className={s.Form__link} href="/">Войти</a>
+        Уже есть аккаунт? <a className={s.Form__link} href="/"> Войти</a>
       </div>
 
       <form>

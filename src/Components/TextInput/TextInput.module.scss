@@ -1,10 +1,8 @@
-.Form {
-  &__item {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 35px;
-  }
+.Field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 34px;
 
   &__label {
     margin-bottom: 7px;

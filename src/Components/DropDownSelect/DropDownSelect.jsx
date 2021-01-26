@@ -1,5 +1,5 @@
 import s from "./DropDownSelect.module.scss";
-import { useState } from 'react';
+import { useState } from "react";
 
 function DropDownSelect({ name, label, options, valueChanged }) {
 
@@ -18,13 +18,19 @@ function DropDownSelect({ name, label, options, valueChanged }) {
     setOpened(false);
   }
 
+  const onKeyDownSelect = (e) => {
+    if (e.key === "Enter") {
+      toggleSelect();
+    }
+  }
+
   const items = options.map((item, index) => <div className={s.Select__item} key={index} onClick={() => selectItem(index)}>{item}</div>)
 
   return (
 
     <div className={s.Select + " " + isOpenedClass}>
       <div className={s.Select__label}>{label}</div>
-      <div className={s.Select__header} onClick={toggleSelect}>
+      <div className={s.Select__header} onClick={toggleSelect} tabIndex="0" onKeyDown={onKeyDownSelect}>
         <span className={s.Select__current}>{currentItem}</span>
         <div className={s.Select__icon}>
           <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
